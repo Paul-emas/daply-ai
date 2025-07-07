@@ -1,8 +1,8 @@
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { User, Bot, Copy, ThumbsUp, ThumbsDown } from "lucide-react";
+import { Bot, Copy, ThumbsUp, ThumbsDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { Message } from "@/app/page";
 import { toast } from "sonner";
+import { Message } from "@/types/message";
 
 interface MessageBubbleProps {
   message: Message;

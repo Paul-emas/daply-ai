@@ -20,8 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className}>
-      <Toaster richColors closeButton />
-      <body>{children}</body>
+      <body>
+        <Toaster richColors closeButton />
+        {children}
+      </body>
     </html>
   );
 }

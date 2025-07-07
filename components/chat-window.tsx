@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { MessageBubble } from "@/components/message-bubble";
 import { LoadingMessage } from "@/components/loading-message";
 import { Send, Mic, Paperclip, ImageIcon } from "lucide-react";
-import type { Message } from "@/app/page";
+import { Message } from "@/types/message";
 
 interface ChatWindowProps {
   messages: Message[];
@@ -177,7 +177,7 @@ export function ChatWindow({
                 onKeyDown={handleKeyDown}
                 placeholder={
                   isLoading
-                    ? "AI is thinking..."
+                    ? "Daply AI is thinking..."
                     : "Continue the conversation..."
                 }
                 className="min-h-[50px] max-h-[120px] bg-white border-gray-200 rounded-xl resize-none pr-12 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors duration-200"
@@ -187,9 +187,10 @@ export function ChatWindow({
                 <Button
                   type="button"
                   variant="ghost"
+                  size="icon"
                   className="h-6 w-6 text-gray-400 hover:text-gray-600"
                 >
-                  Send
+                  <Paperclip className="h-3 w-3" />
                 </Button>
                 <Button
                   type="button"

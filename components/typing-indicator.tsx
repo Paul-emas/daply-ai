@@ -15,10 +15,10 @@ export function TypingIndicator({
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const typingTexts = [
-    "AI is thinking",
-    "AI is processing",
-    "AI is generating response",
-    "AI is typing",
+    "Daply AI is thinking",
+    "Daply AI is processing",
+    "Daply AI is generating response",
+    "Daply AI is typing",
   ];
 
   useEffect(() => {

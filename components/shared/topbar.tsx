@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { PromptSettings } from "../prompt-settings";
+import PromptSettings from "../prompt-settings";
 import { Settings, Zap } from "lucide-react";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
@@ -43,14 +43,14 @@ const Topbar = ({
 
           <div className="flex items-center gap-3">
             {universalPrompt && !isLoading && !isSending && (
-              <Badge className="bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100">
+              <Badge className="bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100">
                 <Zap className="w-3 h-3 mr-1" />
                 Custom Instructions
               </Badge>
             )}
             {(isLoading || isSending) && (
               <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 rounded-full">
-                <div className="w-2 h-2 bg-gray-500 rounded-full animate-pulse"></div>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                 <span className="text-sm text-gray-600">
                   {isSending ? "Sending..." : "Thinking..."}
                 </span>

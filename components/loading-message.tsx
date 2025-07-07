@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export function LoadingMessage() {
   const [currentPhase, setCurrentPhase] = useState(0);
 
-  const phases = ["Thinking...", "Processing...", "Generating response..."];
+  const phases = ["thinking...", "processing...", "generating response..."];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,7 +29,7 @@ export function LoadingMessage() {
         <div className="inline-block px-4 py-3 rounded-2xl bg-gray-50 border border-gray-100">
           <div className="flex items-center gap-3">
             <span className="text-sm text-gray-600">
-              {phases[currentPhase]}
+              Daply is {phases[currentPhase]}
             </span>
             <div className="flex space-x-1">
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>

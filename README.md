@@ -110,9 +110,7 @@
 
 ## 🎨 Design Features
 
-- **Clean Interface**: Minimalist design inspired by Vercel v0
 - **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile
-- **Dark/Light Theme**: Supports system theme preferences
 - **Smooth Animations**: Subtle transitions and loading states
 - **Accessible**: Built with accessibility best practices
 
