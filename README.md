@@ -1,3 +1,5 @@
+# **Daply AI Frontend Assignment**
+
 ## ✨ Features
 
 ### 🔹 Tier 1: Basic Chat Interface
@@ -34,7 +36,7 @@
 ### Prerequisites
 
 - Node.js 18+ installed on your machine
-- Package manager: \`pnpm\`, \`npm\`, or \`yarn\`
+- Package manager: \`bun\`, \`pnpm\`, \`npm\`, or \`yarn\`
 
 ### Installation
 
@@ -43,13 +45,17 @@
 2. **Install dependencies**
    \`\`\`bash
 
-   # Using pnpm (recommended)
+   # Using bun (recommended)
 
-   pnpm install
+   bun install
 
    # Using npm
 
    npm install
+
+   # Using pnpm
+
+   pnpm install
 
    # Using yarn
 
@@ -58,6 +64,10 @@
 
 3. **Run the development server**
    \`\`\`bash
+
+   # Using bun
+
+   bun dev
 
    # Using pnpm
 
@@ -100,7 +110,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14+ (App Router)
+- **Framework**: Next.js (App Router)
 - **Language**: TypeScript
 - **Styling**: TailwindCSS
 - **UI Components**: Shadcn UI
@@ -108,50 +118,8 @@
 - **State Management**: React useState/useEffect
 - **Storage**: Browser localStorage
 
-## 🎨 Design Features
-
-- **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile
-- **Smooth Animations**: Subtle transitions and loading states
-- **Accessible**: Built with accessibility best practices
-
-## 🔧 Customization
-
-### Adding Real AI Integration
-
-Replace the \`simulateAIResponse\` function in \`app/page.tsx\` with your preferred AI service:
-
-\`\`\`typescript
-// Example with OpenAI
-import { openai } from '@ai-sdk/openai'
-import { generateText } from 'ai'
-
-async function getAIResponse(message: string, prompt: string) {
-const { text } = await generateText({
-model: openai('gpt-4'),
-prompt: prompt ? \`\${prompt}\\n\\nUser: \${message}\` : message,
-})
-return text
-}
-\`\`\`
-
-### Styling Customization
-
-- Modify \`tailwind.config.ts\` for custom colors and themes
-- Update Shadcn UI components in \`components/ui/\` for custom styling
-- Adjust spacing and layout in individual components
-
 ## 📱 Usage
 
 1. **Start Chatting**: Type a message and press Enter or click Send
-2. **Set Universal Prompt**: Click the settings icon to add a universal prompt
+2. **Set Custom instructions Prompt**: Click the settings icon to add a universal prompt
 3. **Multiline Messages**: Use Shift+Enter to add line breaks
-4. **Clear Prompt**: Use the "Clear Prompt" button in settings to reset
-
-## 🤝 Contributing
-
-Feel free to submit issues, feature requests, or pull requests to improve this chatbot interface.
-
-## 📄 License
-
-This project is open source and available under the MIT License.
-\`\`\`
