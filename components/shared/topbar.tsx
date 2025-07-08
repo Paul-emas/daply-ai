@@ -35,9 +35,7 @@ const Topbar = ({
             </div>
             <div>
               <h1 className="text-base font-bold text-gray-900">Daply AI</h1>
-              <p className="text-xs text-gray-500">
-                Intelligent conversation partner
-              </p>
+              <p className="text-xs text-gray-500">Conversation partner</p>
             </div>
           </div>
 
