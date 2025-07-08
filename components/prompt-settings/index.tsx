@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -14,6 +14,7 @@ import { Trash2, Settings } from "lucide-react";
 import PromptInstructionsSection from "@/components/prompt-settings/prompt-instructions-section";
 import { quickPrompts } from "@/utils/preset-prompts";
 import PromptQuickPresetsSection from "./prompt-quick-presets-section";
+import { set } from "date-fns";
 
 export interface PromptSettingsProps {
   isOpen: boolean;
@@ -28,11 +29,20 @@ const PromptSettings = ({
   universalPrompt,
   onPromptChange,
 }: PromptSettingsProps) => {
-  const [tempPrompt, setTempPrompt] = useState<string>(universalPrompt);
+  const [tempPrompt, setTempPrompt] = useState<string>("");
+
+  useEffect(() => {
+    if (!universalPrompt) {
+      return;
+    }
+
+    setTempPrompt(universalPrompt);
+  }, [universalPrompt]);
 
   const handleSave = () => {
     if (!tempPrompt) return;
     onPromptChange(tempPrompt);
+    setTempPrompt("");
     onClose();
   };
 
